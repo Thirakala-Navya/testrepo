@@ -1,0 +1,343 @@
+1.Which of these statements is incorrect?
+>>By multithreading CPU idle time is minimized, and we can take maximum use of it
+***A thread can exist only in two states, running and blocked**
+>>By multitasking CPU idle time is minimized, and we can take maximum use of it
+>>Two thread in Java can have the same priority
+
+
+2.What is the default relation b/w Thread & Runnable?
+>>Thread extends Runnable
+>>They are not related**
+A.Thread implements Runnable
+>>Thread an interface
+
+3.What is the priority of the thread in the following Java Program
+class multithreaded_programing
+{ public static void main(String args[])
+{ Thread t = Thread.currentThread(); System.out.println(t);
+} }
+>>4
+A.5
+>>2
+>>10
+
+4.Which of the following method is used to launch a new thread?
+>>run()
+A.start()
+>>join()
+>>sleep()
+
+4.What is the name of the thread in the following Java Program?
+class multithreaded_programing {
+public static void main(String args[])
+{ Thread t = Thread.currentThread(); System.out.println(t);
+} }
+>>Thread
+A.main
+>>System
+>>Multithread
+
+5.Thread priority in Java is?
+A.Integer
+>>Float
+>>double
+>>long
+
+6.How many Threads created from the below code
+class Test extends Thread {
+public
+void run()
+{
+System.out.println("Run");
+}
+} class Myclass {
+public
+static void main(String[] args)
+{
+Test t = new Test();
+t.start();
+}
+}
+
+>>Depend upon system
+>>One thread created
+A.Two thread created
+>>Zero
+
+7.In pre-emptive scheduling a thread can be in one of the three states:
+>>Start, Ready, Resume
+A.Running, Ready, Blocked
+>>Running, unBlocked, Blocked
+>>Running, Ready, Resume
+
+8.How many Threads created from the below code
+class Test extends Thread {
+public
+void run()
+{
+System.out.println("Run");
+}
+} class Myclass {
+public
+static void main(String[] args)
+{
+Test t = new Test();
+t.start();
+}
+}
+>>Depend upon system
+>>One thread created
+A.Two thread created
+>>Zero
+
+9.In pre-emptive scheduling a thread can be in one of the three states:
+>>Start, Ready, Resume
+A.Running, Ready, Blocked
+>>Running, unBlocked, Blocked
+>>Running, Ready, Resume
+
+10.What is the output of follwoing code
+class Exp21 extends Thread
+{
+}
+
+public class Tp
+{
+public static void main(String[] args) {
+Thread.currentThread().setPriority(9);
+Exp21 e1=new Exp21();
+System.out.println(Thread.currentThread().getPriority());
+e1.setPriority(4);
+System.out.print(e1.getPriority());
+}}
+
+A.9 4
+
+>>9 9
+>>4 4
+>>5 5
+===================================================================
+DAY 2
+1.class NameRunnable implements Runnable {
+public void run() {
+System.out.println("NameRunnable running");
+System.out.println("Run by "+ Thread.currentThread().getName());
+}}
+public class WWW {
+public static void main (String [] args) {
+NameRunnable nr = new NameRunnable();
+Thread t = new Thread(nr);
+t.start();
+}
+}
+
+>>NameRunnable running
+Run by Main
+>>NameRunnable running
+Run by Thread-5
+A.NameRunnable running
+Run by Thread-0
+>>NameRunnable running
+Run by Thread-10
+
+2.Which of these are types of multitasking ?
+>>Process based
+A.Process and Thread based
+>>Process based or Thread based
+>>Thread based
+
+3.import java.util.LinkedList;
+class Demo {
+public void show()
+{
+LinkedList<String> list = new LinkedList<String>();
+list.add("Element1"); // line 6
+list.add("Element2");
+System.out.print(list.getFirst()); // line 8
+}
+} public class Main {
+public static void main(String[] args)
+{
+Demo demo = new Demo();
+demo.show();
+}
+}
+>>Compilation Error at line 8
+>>Element2
+A.Element 1
+>>Runtime Error
+
+4.import java.util.*;
+class A
+{
+public static void main(String[] args)
+{
+HashSet<String> set=new HashSet<String>();
+set.add(null);
+set.add("One");
+for(String s: set)
+System.out.println(s);
+}
+}
+
+>>NullPointerException
+A.null, One
+>>null
+>>one
+
+
+5.mport java.util.*;
+public class Arr {
+public static void main(String args[]){
+ArrayList<String> list1=new ArrayList<String>();
+list1.add("PRAVEEN");//Adding object in arraylist
+list1.add("KUMAR");
+list1.add(12);
+list1.add(34.56);
+list1.add("Kumar");
+list1.remove(3);
+System.out.println(list1.size());
+Iterator itr=list1.iterator();
+while(itr.hasNext()){
+System.out.println(itr.next());
+}
+}
+}
+>>4
+PRAVEEN
+KUMAR
+12
+Kumar
+>>A.Complie TIme Error
+>>PRAVEEN
+4
+KUmar
+12
+>>Exception at runtime
+
+6.What is the name of the method used to start a thread execution?
+>>run()
+A.start()
+>>init()
+>>yeild()
+
+7.Which of the following collection is not of Iterable type
+>>ArrayList
+>>A.HashMap
+>>Vector
+>>TreeSet
+
+8.import java.util.*;
+class Business {
+}
+class Hotel extends Business {
+}
+class Inn extends Hotel {
+}
+public class Travel {
+ArrayList go()
+{
+// insert code here
+} }
+>>return new ArrayList<Inn>();
+>>return new ArrayList<Business>()
+>>A.return new ArrayList<Hotel>();
+>>return new ArrayList<Travel>()
+
+9.class NameRunnable implements Runnable
+{ public void run()
+{ System.out.println("NameRunnable running"); System.out.println("Run by " + Thread.currentThread().getName());
+} } public class NameThread { public static void main (String [] args) { NameRunnable nr = new NameRunnable(); Thread t = new Thread(nr); t.setName("GCET"); t.start(); } }
+
+>>A.NameRunnable running Run by GCET
+>>Run by GCET
+>>NameRunnable GCET
+>>code not complie
+
+=====================================================================
+day 3:
+1.select all records where City is NOT "DEL"
+>>select * from customer WHERE NOT City ="DEL";
+>>select city name NOT DEL;
+>>select * from customer wehre NOT city='DEL';
+>>select * from customer where city='DEL';
+
+2.If you want to allow age of a person > 18 in the column Age of table Person, then which constraint will be applied to AGE column.
+>>Default
+>>NOT NULL
+>>A.Check
+>>UNique
+
+3.Insert the missing statement to get all the columns from the Customers table.
+>>A.select * from customers;
+>>retrivew customers;
+>>select cno from customers;
+>>display all customers
+
+4.SQL Query to delete all rows in a table without deleting the table (structure, attributes, and indexes)
+>>A.DELETE FROM table_name;
+>>Alter TABLE table_name;
+>>DROP TABLE table_name;
+>>DELETE TABLE table_name;
+
+5.___________removes all rows from a table without logging the individual row deletions.
+>>DELETE
+>>DROP
+>>A.TRUNCATE
+>>REMOVE
+
+6.Which statement is wrong about PRIMARY KEY constraint in SQL
+>>The PRIMARY KEY uniquely identifies each record in a SQL database table
+>>Primary key can be made based on multiple columns
+>>Primary keys must contain UNIQUE values
+>>A.Primary key must be made of any single columns
+
+7.In existing table, ALTER TABLE statement is used to
+>>Add columns
+>>Add constraints
+>>update table
+>>A.only 1,2
+
+8.Logical operators used in SQL are
+>>A.AND, OR , NOT
+>>&&, ||, !
+>>$,|,!
+>>-,+ ,!
+
+9.Which of the following statement is true?
+>>Both DELETE and TRUNCATE free the space containing the table
+>>A.DELETE does not free the space containing the table and TRUNCATE free the space containing the table
+>>DELETE free the space containing the table and TRUNCATE does not free the space containing the table
+>>Both DELETE and TRUNCATE does not free the space containing the table
+
+10.Which SQL keyword is used to retrieve a maximum value?
+>>A.MAX
+>>MIN
+>>AVG
+>>UPPER
+
+11.Select all records where the City column has the value "HYD"
+>>SELECT * FROM Customers WHERE hyd ;
+>>A.SELECT * FROM Customers WHERE city ='HYD';
+>>SELECT * FROM Customers WHERE city is HYD
+>>Select hyd city from customer;
+
+12.Correct syntax query syntax to drop a column from a table is
+>>DELETE COLUMN column_name;
+>>A.ALTER TABLE table_name DROP COLUMN column_name;
+>>DROP COLUMN column_name;
+>>None is correct.
+
+13.Correct SQL query syntax to update a record from a table is
+>>A.UPDATE table_name UPDATE table_name
+SET column1 = value1, column2 = value2, …
+WHERE condition;
+>>UPDATE table_nameSET COLUMN column1 = value1, column2 = value2, …WHERE condition;
+>>UPDATE table_nameUPDATE column1 = value1, column2 = value2, …WHERE condition;
+>>UPDATE table_namecolumn1 = value1, column2 = value2, …WHERE condition;
+
+14.what is the use of NOT NULL Constraint.
+>>Provides a default value for a column when none is specified.
+>>A.Ensures that a column cannot have NULL value.
+>>Uniquely identifies each row/record in a database table.
+>>The CHECK constraint ensures that all the values in a column satisfies certain conditions.
